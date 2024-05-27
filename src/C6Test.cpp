@@ -1,4 +1,4 @@
-// #include <FastLED.h>
+#include <FastLED.h>
 // #include <I2SClocklessLedDriver.h>
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
@@ -6,7 +6,7 @@
 
 AsyncWebServer ws(80);
 JsonDocument doc;
-// CRGB leds[1];
+CRGB leds[1];
 
 void setup() {}
 void loop() {}
