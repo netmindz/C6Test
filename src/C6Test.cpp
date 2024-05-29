@@ -8,5 +8,13 @@ AsyncWebServer ws(80);
 JsonDocument doc;
 CRGB leds[1];
 
-void setup() {}
-void loop() {}
+void setup() {
+    Serial.begin(115200);
+    Serial.println("Setup");
+    FastLED.addLeds<NEOPIXEL, 9>(leds, 1);
+}
+void loop() {
+    Serial.print(".");
+    leds[0] = CRGB::Red;
+    FastLED.show();
+}
